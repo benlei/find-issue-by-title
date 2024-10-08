@@ -1,7 +1,7 @@
 {
   "name": "find-issue-by-title",
   "description": "Finds an issue by title, with some filtering options to reduce chance of hitting rate limit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "benlei",
   "private": true,
   "homepage": "https://github.com/benlei/find-issue-by-title",
