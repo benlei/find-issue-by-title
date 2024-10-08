@@ -42,8 +42,26 @@ inputs:
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  id:
+    description: 'The ID of the issue that was found'
+  number:
+    description: 'The number of the issue that was found'
+  title:
+    description: 'The title of the issue that was found'
+  body:
+    description: 'The body of the issue that was found'
+  state:
+    description: 'The state of the issue that was found'
+  locked:
+    description: 'Whether the issue is locked'
+  comments:
+    description: 'The number of comments on the issue'
+  created-at:
+    description: 'The date the issue was created'
+  updated-at:
+    description: 'The date the issue was last updated'
+  closed-at:
+    description: 'The date the issue was closed'
 
 runs:
   using: node20
