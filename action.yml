@@ -1,18 +1,44 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'get-issue-by-title'
+description: 'Gets an issue by an exact title match'
+author: 'benlei'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: 'heart'
-  color: 'red'
+  icon: 'play'
+  color: 'orange'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
-    required: true
-    default: '1000'
+  repository:
+    description:
+      'The repository to fetch the issue from. For example, benlei/test-action'
+    default: ${{ github.repository }}
+  token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
+  fail-on-error:
+    description: 'Whether to fail the action if any error occurs'
+    default: 'true'
+    required: false
+  issue-number:
+    description: 'The number of the issue to load data from'
+    required: false
+  title:
+    description:
+      'The exact title of the issue, if issue-number is not specified'
+    required: false
+  state:
+    description:
+      'The expected state of the issue. Should either be open (default), closed,
+      or all'
+    required: false
+    default: 'open'
+  labels:
+    description:
+      'A comma-separated list of labels to filter the issue by, such as
+      `bug,ui,@high`'
+    required: false
 
 # Define your outputs here.
 outputs:
