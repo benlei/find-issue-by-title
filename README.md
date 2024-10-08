@@ -1,13 +1,13 @@
-# benlei/get-issue-by-title
+# benlei/find-issue-by-title
 
-[![GitHub Super-Linter](https://github.com/benlei/get-issue-by-title/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/benlei/get-issue-by-title/actions/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/benlei/get-issue-by-title/actions/workflows/check-dist.yml/badge.svg)](https://github.com/benlei/get-issue-by-title/actions/workflows/check-dist.yml)
-[![CodeQL](https://github.com/benlei/get-issue-by-title/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/benlei/get-issue-by-title/actions/workflows/codeql-analysis.yml)
+[![GitHub Super-Linter](https://github.com/benlei/find-issue-by-title/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+![CI](https://github.com/benlei/find-issue-by-title/actions/workflows/ci.yml/badge.svg)
+[![Check dist/](https://github.com/benlei/find-issue-by-title/actions/workflows/check-dist.yml/badge.svg)](https://github.com/benlei/find-issue-by-title/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/benlei/find-issue-by-title/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/benlei/find-issue-by-title/actions/workflows/codeql-analysis.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
-Gets a single issue by exact title, with ability to additionally filter by state
-and labels for reducing rate limiting purposes.
+Finds a single issue by exact title, with ability to additionally filter by
+state and labels for reducing rate limiting purposes.
 
 Internally what it does is it lists all issues for a repository and filters by
 state and labels, then tries to match every issue title with the provided title.
@@ -52,12 +52,12 @@ directly instead.
 ## Example usage
 
 ```yaml
-- uses: benlei/get-issue-by-title@v1
-  id: get-issue
+- uses: benlei/find-issue-by-title@v1
+  id: find-issue
   with:
     title: 'Get issue by title'
     state: 'open'
     labels: 'bug'
 
-- run: echo "Issue Number: ${{ steps.get-issue.outputs.number }}"
+- run: echo "Issue Number: ${{ steps.find-issue.outputs.number }}"
 ```

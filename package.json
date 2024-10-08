@@ -1,16 +1,16 @@
 {
-  "name": "get-issue-by-title",
-  "description": "Get an issue by title, with some filtering options to reduce chance of hitting rate limit",
+  "name": "find-issue-by-title",
+  "description": "Finds an issue by title, with some filtering options to reduce chance of hitting rate limit",
   "version": "1.0.0",
   "author": "benlei",
   "private": true,
-  "homepage": "https://github.com/benlei/get-issue-by-title",
+  "homepage": "https://github.com/benlei/find-issue-by-title",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benlei/get-issue-by-title.git"
+    "url": "git+https://github.com/benlei/find-issue-by-title.git"
   },
   "bugs": {
-    "url": "https://github.com/benlei/get-issue-by-title/issues"
+    "url": "https://github.com/benlei/find-issue-by-title/issues"
   },
   "keywords": [
     "actions",

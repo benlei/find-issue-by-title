@@ -1,5 +1,5 @@
-name: 'get-issue-by-title'
-description: 'Gets an issue by an exact title match'
+name: 'find-issue-by-title'
+description: 'Finds an issue by an exact title match'
 author: 'benlei'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
