@@ -1,4 +1,4 @@
-import { describe, beforeEach, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import * as inputs from '../../src/inputs/coreInputs'
 import {
   issueLabels,
@@ -9,10 +9,6 @@ import {
 import { filterOptions } from '../../src/inputs/parsedInputs'
 
 describe('repository', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should parse default repository properly', () => {
     process.env.GITHUB_REPOSITORY = 'owner/repo'
     vi.spyOn(inputs, 'repositoryInput').mockReturnValue('')
@@ -37,10 +33,6 @@ describe('repository', () => {
 })
 
 describe('issueNumber', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should parse issue number properly', () => {
     vi.spyOn(inputs, 'issueNumberInput').mockReturnValue('1236')
     expect(issueNumber()).toBe(1236)
@@ -48,10 +40,6 @@ describe('issueNumber', () => {
 })
 
 describe('issueState', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should parse issue state properly', () => {
     vi.spyOn(inputs, 'stateInput').mockReturnValue('open')
     expect(issueState()).toBe('open')
@@ -73,10 +61,6 @@ describe('issueState', () => {
 })
 
 describe('issueLabels', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should parse issue labels properly', () => {
     vi.spyOn(inputs, 'labelsInput').mockReturnValue('foo,bar')
     expect(issueLabels()).toBe('foo,bar')
@@ -87,10 +71,6 @@ describe('issueLabels', () => {
 })
 
 describe('filterOptions', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should return filter options properly', () => {
     vi.spyOn(inputs, 'stateInput').mockReturnValue('open')
     vi.spyOn(inputs, 'labelsInput').mockReturnValue('foo,bar')

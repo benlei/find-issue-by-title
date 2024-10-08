@@ -3,7 +3,7 @@ import { failOnErrorInput, issueNumber, titleInput } from './inputs'
 import { IssueData } from './types'
 import { getIssueByIssueNumber } from './github'
 import { findIssueByTitle } from './issue'
-import { filterOptions } from './inputs/parsedInputs'
+import { filterOptions } from './inputs'
 
 export const getIssue = async (): Promise<IssueData> => {
   let result: IssueData | null = null

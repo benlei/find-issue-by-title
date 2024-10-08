@@ -3,5 +3,6 @@ export {
   repository,
   issueNumber,
   issueState,
-  issueLabels
+  issueLabels,
+  filterOptions
 } from './parsedInputs'

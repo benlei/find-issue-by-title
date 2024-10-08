@@ -1,4 +1,4 @@
-import { describe, beforeEach, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import * as github from '../src/github'
 import { IssueListResponse } from '../src/types'
 import { findIssueByTitle } from '../src/issue'
@@ -58,10 +58,6 @@ const IssueResponseData2 = {
 }
 
 describe('findIssueByTitle', () => {
-  beforeEach(() => {
-    vi.clearAllMocks()
-  })
-
   it('should find issue by title', async () => {
     async function* iterator(): AsyncIterableIterator<IssueListResponse> {
       yield IssueResponseData1
