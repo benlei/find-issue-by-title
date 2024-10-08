@@ -1,3 +1,4 @@
+/* v8 ignore start */
 import * as core from '@actions/core'
 
 export const githubTokenInput = (): string =>
@@ -41,3 +42,5 @@ export const labelsInput = (): string =>
     required: false,
     trimWhitespace: true
   })
+
+/* v8 ignore end */

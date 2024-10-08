@@ -32585,6 +32585,7 @@ var __webpack_exports__ = {};
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
 var core = __nccwpck_require__(2186);
 ;// CONCATENATED MODULE: ./src/inputs/coreInputs.ts
+/* v8 ignore start */
 
 const githubTokenInput = () => core.getInput('token', {
     required: false,
@@ -32614,6 +32615,7 @@ const labelsInput = () => core.getInput('labels', {
     required: false,
     trimWhitespace: true
 });
+/* v8 ignore end */
 
 // EXTERNAL MODULE: ./node_modules/@actions/github/lib/github.js
 var github = __nccwpck_require__(5438);
@@ -32656,6 +32658,7 @@ var utils = __nccwpck_require__(3030);
 // EXTERNAL MODULE: ./node_modules/@octokit/plugin-retry/dist-node/index.js
 var dist_node = __nccwpck_require__(6298);
 ;// CONCATENATED MODULE: ./src/github.ts
+/* v8 ignore start */
 
 
 
@@ -32680,6 +32683,7 @@ const getIssueByIssueNumber = async (issueNumber) => await octokit().rest.issues
     ...repository(),
     issue_number: issueNumber
 });
+/* v8 ignore end */
 
 ;// CONCATENATED MODULE: ./src/issue.ts
 
@@ -32702,7 +32706,7 @@ const getIssue = async () => {
     let result = null;
     if (issueNumber()) {
         core.info(`Fetching issue number ${issueNumber()}`);
-        result = (await getIssueByIssueNumber(issueNumber())).data ?? null;
+        result = (await getIssueByIssueNumber(issueNumber())).data;
     }
     else if (titleInput()) {
         core.info(`Fetching issue with title "${titleInput()}" with options ${JSON.stringify(filterOptions())}`);
@@ -32749,12 +32753,14 @@ const run = async () => {
 };
 
 ;// CONCATENATED MODULE: ./src/index.ts
+/* v8 ignore start */
 /**
  * The entrypoint for the action.
  */
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 run();
+/* v8 ignore end */
 
 })();
 

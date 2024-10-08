@@ -9,7 +9,7 @@ export const getIssue = async (): Promise<IssueData> => {
   let result: IssueData | null = null
   if (issueNumber()) {
     core.info(`Fetching issue number ${issueNumber()}`)
-    result = (await getIssueByIssueNumber(issueNumber())).data ?? null
+    result = (await getIssueByIssueNumber(issueNumber())).data
   } else if (titleInput()) {
     core.info(
       `Fetching issue with title "${titleInput()}" with options ${JSON.stringify(filterOptions())}`

@@ -1,3 +1,4 @@
+/* v8 ignore start */
 import { getOctokit } from '@actions/github'
 import {
   defaults as defaultGitHubOptions,
@@ -45,3 +46,5 @@ export const getIssueByIssueNumber = async (
     ...repository(),
     issue_number: issueNumber
   })
+
+/* v8 ignore end */
