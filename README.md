@@ -18,15 +18,15 @@ directly instead.
 
 <!-- markdownlint-disable MD013 -->
 
-| Name            | Required | Default                     | Description                           |
-| --------------- | -------- | --------------------------- | ------------------------------------- |
-| `repository`    | no       | `$ {{ github.repository }}` | The repository to get the issue from. |
-| `token`         | no       | `$ {{ github.token }}`      | The token to use for authentication.  |
-| `fail-on-error` | no       | `true`                      | Whether to fail if an error occurs.   |
-| `issue-number`  | no       | `''`                        | The issue number to get.              |
-| `title`         | no       | `''`                        | The title of the issue to get.        |
-| `state`         | no       | `'open'`                    | The state of the issue to get.        |
-| `labels`        | no       | `''`                        | The labels of the issue to get.       |
+| Name            | Required | Default                    | Description                                                                           |
+| --------------- | -------- | -------------------------- | ------------------------------------------------------------------------------------- |
+| `repository`    | no       | `${{ github.repository }}` | The repository to get the issue from.                                                 |
+| `token`         | no       | `${{ github.token }}`      | The token to use for authentication.                                                  |
+| `fail-on-error` | no       | `true`                     | Whether to fail if an error occurs.                                                   |
+| `issue-number`  | no       | `''`                       | The issue number to get.                                                              |
+| `title`         | no       | `''`                       | The title of the issue to get.                                                        |
+| `state`         | no       | `'open'`                   | The state of the issue to get. Valid values are `open` (default), `closed`, or `all`. |
+| `labels`        | no       | `''`                       | The labels of the issue to get, comma separated.                                      |
 
 <!-- markdownlint-enable MD013 -->
 
