@@ -64,5 +64,5 @@ outputs:
     description: 'The date the issue was closed'
 
 runs:
-  using: node20
+  using: node24
   main: dist/index.js
